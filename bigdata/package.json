@@ -1,0 +1,49 @@
+{
+  "name": "assignment-big-data",
+  "version": "1.0.0",
+  "description": "1DV027 - Assignment - Assignment Wt2 Big Data",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node src/server.js",
+    "start:dev": "nodemon --inspect -r dotenv/config src/server.js",
+    "lint": "npx eslint ./src || exit 0",
+    "lint:fix": "npx eslint ./src --fix || exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.lnu.se/1dv027/student/mg223tj/assignment-wt2-big-data"
+  },
+  "contributors": [
+    "Mia-Maria Galistel <mg223tj@student.lnu.se>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "express-hbs": "2.4.0",
+    "express-session": "^1.17.2",
+    "google-charts-node": "^1.0.4",
+    "helmet": "^5.0.2",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@lnu/eslint-config": "1.1.2",
+    "dotenv": "^16.0.0",
+    "eslint": "7.30.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsdoc": "^35.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "nodemon": "^2.0.15"
+  },
+  "eslintConfig": {
+    "extends": "@lnu"
+  },
+  "nodemonConfig": {
+    "ext": "js,json,hbs,html,css"
+  }
+}
